@@ -1,0 +1,21 @@
+.imgnormalizada {
+    width: auto;
+    height: 225px;
+    max-height: 225px;
+}
+
+.footer-propio {
+    color: #1A1A1A;
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 81px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.redondo{
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+}
