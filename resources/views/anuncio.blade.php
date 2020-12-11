@@ -12,7 +12,7 @@
               <?php
                 $anuncioNuevo=htmlspecialchars_decode($a->contenido);
                 echo $anuncioNuevo;
-             ?>
+            ?>
             </div>
       </div> 
       <div class="card-footer">
