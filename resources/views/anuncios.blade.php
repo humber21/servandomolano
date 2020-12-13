@@ -7,7 +7,7 @@
 
   <div class="container" style="margin-top: 100px">
     <h1>Anuncios</h1>
-    @foreach ($anuncios as $anuncio)
+    <!-- @foreach ($anuncios as $anuncio) -->
     <!-- <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{$anuncio->titulo}}
@@ -18,7 +18,7 @@
         </div>
     </div>
     <hr class="featurette-divider">   -->
-  @endforeach
+  <!-- @endforeach -->
   </div>
   <div class="container">
     {{ $anuncios->links('vendor/pagination/bootstrap-4')}}
