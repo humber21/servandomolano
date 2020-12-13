@@ -5,12 +5,13 @@
 <!-- @section('plugin.Sweetalert2') -->
 
 @section('content_header')
-@foreach ($anuncios as $anuncio)
-    <h1>{{$anuncio->titulo}}</h1>
+  
+    <!-- <h1>{{$anuncio->titulo}}</h1> -->
 @stop
 
+@foreach ($anuncios as $anuncio)
 @section('content')
-<form action="{{route('EditarAnuncio',$anuncio->id)}}" method="post">
+<form action="{{route('EditarAnuncio',$anuncio->id)}}" method="POST">
   @csrf
   <div class="form-group">
     <label for="titulo" class="col-form-label">Titulo</label>
