@@ -22,9 +22,9 @@ class AnunciosController extends Controller
         $anuncios = Anuncio::where('id',$id)->get();
 
         if (Auth::user() == true){
-            $respuesta = view('AnuncioAdmin')->with('anuncios',$anuncios);
+            $respuesta = view('AnuncioAdmin',['anuncios'=>$anuncios]);
         }else{
-            $respuesta = view('Anuncio')->with('anuncios',$anuncios);
+            $respuesta = view('Anuncio',['anuncios'=>$anuncios]);
         }
         return $respuesta;
     }
