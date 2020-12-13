@@ -49,7 +49,7 @@ public function EliminarAnuncio($id){
     // $anuncio = Anuncio::where('id',$id)->delete();
     if($anuncio = Anuncio::where('id',$id)->delete()){
         $anuncios = Anuncio::orderBy('created_at','desc')->paginate(5);
-        return view('Home')->with('anuncios',$anuncios)->with('mensaje','Anuncio eliminado correctamente');
+        return view('home')->with('anuncios',$anuncios)->with('mensaje','Anuncio eliminado correctamente');
     }
 }
 }
