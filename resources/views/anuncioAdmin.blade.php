@@ -5,11 +5,11 @@
 <!-- @section('plugin.Sweetalert2') -->
 
 @section('content_header')
-  
-    <!-- <h1>{{$anuncio->titulo}}</h1> -->
+  @foreach ($anuncios as $anuncio)
+    <h1>{{$anuncio->titulo}}</h1>
 @stop
 
-@foreach ($anuncios as $anuncio)
+
 @section('content')
 <form action="{{route('EditarAnuncio',$anuncio->id)}}" method="POST">
   @csrf
@@ -20,7 +20,7 @@
   <div class="form-group">
     <label for="contenido-anuncio" class="col-form-label">Contenido</label>
     <textarea class="form-control ckeditor" id="contenido-anuncio" name="contenido">
-      <?php
+              <?php
                 $anuncioNuevo=htmlspecialchars_decode($anuncio->contenido);
                 echo $anuncioNuevo;
               ?>
