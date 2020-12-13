@@ -2,7 +2,6 @@
 
 @section('title', 'Dashboard')
 
-<!-- @section('plugin.Sweetalert2') -->
 
 @section('content_header')
   @foreach ($anuncios as $anuncio)
@@ -35,5 +34,5 @@
 @section('js')
     <script> console.log('Hi!'); </script>
     <script src="{{ asset('/vendor/ckeditor/ckeditor.js') }}"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
+    
 @stop
