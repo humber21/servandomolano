@@ -13,12 +13,12 @@ class AnunciosController extends Controller
 public function MostrarPagAnuncios()
     {
         $anuncios = Anuncio::orderBy('created_at','desc')->paginate(5);
-        return view('Anuncios')->with('anuncios',$anuncios);
+        return view('anuncios')->with('anuncios',$anuncios);
     }
     public function MostrarAnuncio($id)
     {
         $anuncios = Anuncio::where('id',$id)->get();
-        
+
         if (Auth::user() == true){
             $respuesta = view('AnuncioAdmin')->with('anuncios',$anuncios);
         }else{
