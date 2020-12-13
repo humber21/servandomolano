@@ -4,7 +4,7 @@
 
 
 <div class="container" style="margin-top: 100px">
-  @foreach ($anuncios ?? '' as $a)
+  @foreach ($anuncios as $a)
   <h1>{{$a->titulo}}</h1>
   <div class="card ">
       <div class="card-body">
