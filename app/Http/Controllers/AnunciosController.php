@@ -18,6 +18,7 @@ public function MostrarPagAnuncios()
     public function MostrarAnuncio($id)
     {
         $anuncios = Anuncio::where('id',$id)->get();
+        
         if (Auth::user() == true){
             $respuesta = view('AnuncioAdmin')->with('anuncios',$anuncios);
         }else{
