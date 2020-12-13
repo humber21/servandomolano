@@ -10,11 +10,13 @@ use Illuminate\Support\Facades\Auth;
 class AnunciosController extends Controller
 {
     //
-public function MostrarPagAnuncios()
-    {
-        $anuncios = Anuncio::orderBy('created_at','desc')->paginate(5);
-        return view('anuncios')->with('anuncios',$anuncios);
-    }
+
+        public function index()
+        {
+            $anuncios = Anuncio::orderBy('created_at','desc')->paginate(5);
+            return view('anuncios',['anuncios'=>$anuncios]);
+        }
+    
     public function MostrarAnuncio($id)
     {
         $anuncios = Anuncio::where('id',$id)->get();
