@@ -26,7 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/',[InicioController::class,'MostrarPagInicio'])->name('paginaWelcome');
 //Rutas de control de la paginaweb
 Route::get('/anuncios',[AnunciosController::class,'MostrarPagAnuncios'])->name('paginaAnuncios');
-Route::get('/anuncios/{id}',[AnunciosController::class,'MostrarAnuncio'])->name('MostrarAnuncio');
+Route::get('/anuncios/mostrar{id}',[AnunciosController::class,'MostrarAnuncio'])->name('MostrarAnuncio');
 Route::post('/anuncios/publicar',[AnunciosController::class,'PublicarAnuncio'])->name('PublicarAnuncio');
 //Ruta para editar una publicacion
 Route::post('/anuncios/editar{id}',[AnunciosController::class,'EditarAnuncio'])->name('EditarAnuncio');
